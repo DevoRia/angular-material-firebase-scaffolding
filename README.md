@@ -1,27 +1,41 @@
-# AngularMaterialFirebaseScaffolding
+# Angular Material Firebase Scaffolding
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
+Scaffolding to develop apps based on firebase using angular material
 
-## Development server
+## How to run
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Install deps
 
-## Code scaffolding
+```angular2html
+npm i
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Generate environments to provide firebase config
+```
+ng generate environments
+```
 
-## Build
+2.1 Navigate to `src/environments/environments.development.ts` and add that config.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
 
-## Running unit tests
+export const environment = {
+  production: false,
+  firebaseConfig: {
+    apiKey: "your-api-key",
+    authDomain: "your-auth-domain.firebaseapp.com",
+    projectId: "your-project-id",
+    storageBucket: "your-storage-bucket.appspot.com",
+    messagingSenderId: "your-messaging-sender-id",
+    appId: "your-app-id"
+  }
+};
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
 
-## Running end-to-end tests
+3. Run the app
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```angular2html
+npm run start
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
