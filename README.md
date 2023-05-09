@@ -21,7 +21,7 @@ ng generate environments
 
 export const environment = {
   production: false,
-  firebaseConfig: {
+  firebase: {
     apiKey: "your-api-key",
     authDomain: "your-auth-domain.firebaseapp.com",
     projectId: "your-project-id",
